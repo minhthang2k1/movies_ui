@@ -1,0 +1,97 @@
+#navbar {
+  justify-content: space-between;
+  justify-content: center;
+  padding: 16px 40px;
+}
+
+#navbar .logo {
+  justify-content: flex-start;
+  display: flex;
+  align-items: center;
+  margin-right: 8px;
+  font-weight: 500;
+}
+
+#navbar .navigation ul {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 16px;
+}
+
+#navbar .navigation ul a button {
+  font-size: 16px;
+  border: none;
+  background-color: #032541;
+  font-weight: 700;
+  color: #fff;
+}
+
+#navbar .navigation li {
+  padding: 8px;
+}
+
+#navbar .navigation {
+  justify-content: space-around;
+}
+
+#navbar .navigation img {
+  width: 100%;
+  height: 20px;
+}
+
+#navbar .menu ul {
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#navbar .menu li {
+  margin-left: 30px;
+  font-weight: 500;
+}
+
+#navbar .menu .language {
+  border: #fff solid 1px;
+  color: #fff;
+  padding: 8px;
+}
+
+#navbar .menu .language li {
+  width: 26px;
+  height: 26px;
+}
+
+#navbar .menu .language:hover {
+  cursor: pointer;
+  background: #fff;
+  color: #000;
+}
+#navbar .menu .search {
+  color: #fff;
+}
+
+#navbar .menu .search svg {
+  width: 30px;
+  height: 30px;
+}
+
+#navbar .menu .profile {
+  background: #805be7;
+  color: #fff;
+  border-radius: 50%;
+  padding: 8px;
+}
+
+#navbar .menu .profile svg {
+  width: 24px;
+  height: 24px;
+}
+
+#navbar .menu .notification {
+  color: #fff;
+}
+
+#navbar .menu .notification svg {
+  width: 23px;
+  height: 23px;
+}
