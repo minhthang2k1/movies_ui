@@ -49,6 +49,9 @@
   border: none;
   border-radius: 30px;
   padding: 10px 20px;
+}
+
+#hero .search-title form div {
   position: relative;
 }
 

@@ -1,0 +1,152 @@
+#today {
+  display: flex;
+  position: relative;
+}
+
+#today .scroller-wrap {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+#today .media {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+#today .scroller_wrap .should_fade .is_fading:after {
+  transition: linear 0.3s;
+  opacity: 1;
+}
+
+#today .scroller_wrap .should_fade:after {
+  content: "";
+  width: 60px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    #fff 100%
+  );
+  will-change: opacity;
+  pointer-events: none;
+}
+
+#today .column-content.flex.trending-scroll.loaded {
+  min-height: 0;
+  height: auto;
+}
+
+#today .column-content.flex.trending-scroll {
+  width: 100%;
+  max-width: 1300px;
+  min-height: 355px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  transition: height 0.5s linear;
+}
+
+#today .column-content.flex {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#today .container {
+  margin-left: 20px;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  margin-top: 0;
+  position: relative;
+  overflow: visible;
+}
+
+#today .container .open {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(20px);
+  border-radius: 8px;
+  z-index: 5;
+  transition: linear 0.1s;
+  opacity: 1;
+  visibility: visible;
+  height: 100%;
+}
+
+#today .container .options {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 4;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #ccc;
+}
+
+#today .container:first-child {
+  margin-left: 40px;
+}
+
+#today .container .options a {
+  height: 20px;
+  width: 20px;
+}
+
+#today .container .options:hover {
+  cursor: pointer;
+  background: #3465c0;
+}
+
+#today .container .options a svg {
+  height: 25px;
+  width: 25px;
+}
+
+#today .container img {
+  width: 150px;
+  min-width: 150px;
+  height: 225px;
+  border-radius: 10px;
+}
+
+#today .content {
+  width: 150px;
+  min-width: 150px;
+  padding: 26px 10px 12px 10px;
+  position: relative;
+  white-space: normal;
+  display: flex;
+  align-content: flex-start;
+  flex-wrap: wrap;
+}
+
+#today .content h2 {
+  font-size: 1em;
+  margin: 0;
+  width: 100%;
+  word-wrap: normal;
+  overflow-wrap: break-word;
+}
+
+#today .content h2 a {
+  font-size: 16px;
+  font-weight: 700;
+  color: #000;
+  text-decoration: none;
+  width: 100%;
+}

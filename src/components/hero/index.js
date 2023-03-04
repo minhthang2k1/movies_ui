@@ -14,10 +14,12 @@ const Hero = () => {
         </div>
         <div className="search">
           <form className="search-form" action="/">
-            <label>
-              <input placeholder="Search for a movie, tv show, person......" />
-            </label>
-            <input type="submit" value="search" />
+            <div>
+              <label>
+                <input placeholder="Search for a movie, tv show, person......" />
+              </label>
+              <input type="submit" value="search" />
+            </div>
           </form>
         </div>
       </div>

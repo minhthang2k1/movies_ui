@@ -1,0 +1,60 @@
+#trailer .container .img-content a img {
+  min-width: 300px;
+  width: 300px;
+  height: calc(300px / 1.78);
+  transition: all 0.2s ease-in-out;
+  transform: scale(1);
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+#trailer .container:first-child {
+  margin-left: 40px;
+}
+
+#trailer .container {
+  min-width: 300px;
+  width: 300px;
+  margin-left: 20px;
+  position: relative;
+}
+
+#trailer .container .content {
+  white-space: normal;
+  display: flex;
+  align-content: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0;
+  margin-top: 10px;
+  width: 100%;
+  align-items: flex-start;
+}
+
+#trailer .container .content h2 a {
+  font-size: 20px;
+  color: #000;
+  text-decoration: none;
+}
+
+#trailer .container .content h3 {
+  font-size: 16px;
+}
+
+#trailer .container .img-content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#trailer .container .img-content .play img {
+  filter: invert(1);
+  width: 70px;
+  height: calc(300px / 1.78);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 4em;
+}

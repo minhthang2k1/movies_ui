@@ -1,0 +1,44 @@
+#trending .header-trending {
+  display: flex;
+  padding: 0 40px;
+  align-items: center;
+}
+
+#trending .header-trending h2 {
+  margin-right: 20px;
+  font-size: 24px;
+}
+
+#trending .header-trending .today-thisweek {
+  border-radius: 30px;
+  border: 1px solid #000;
+  display: flex;
+}
+
+#trending .header-trending .today-thisweek h3 {
+  padding: 4px 20px;
+}
+
+#trending .today-thisweek h3 a {
+  font-size: 16px;
+  text-decoration: none;
+  color: #000;
+}
+
+#trending {
+  padding-top: 30px;
+}
+
+#trending .trending-content {
+  padding: 30px 0;
+}
+
+#trending .native {
+  border-radius: 30px;
+  border: #000 solid 1px;
+  background-color: rgba(3, 37, 65, 1);
+}
+
+#trending .header-trending .today-thisweek .native a {
+  color: #fff;
+}

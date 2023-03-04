@@ -1,35 +1,42 @@
-#footer nav {
+#footer-movies nav {
   background-color: #032541;
   position: absolute;
   padding: 80px 0;
   left: 0;
   right: 0;
-  bottom: 0;
   display: flex;
   justify-content: center;
   font-weight: bold;
 }
 
-#footer div {
+#footer-movies div {
   margin-right: 40px;
+  color: #fff;
 }
 
-/* #footer div.logofooter {
+#footer-movies div h3 {
+  font-size: 21px;
+  font-weight: 900;
+}
+
+#footer-movies div ul li a {
+  font-size: 18px;
+  font-weight: 900;
+  text-decoration: none;
+  color: #fff;
+}
+
+#footer-movies div.logofooter {
   right: 0;
   position: relative;
   top: -36px;
-} */
+}
 
-/* #footer .logofooter img {
+#footer-movies .logofooter img {
   position: absolute;
   top: 0;
   right: 0;
   display: block;
   width: 130px;
   height: 94px;
-} */
-
-/* #footer .logofooter a {
-  position: relative;
-  top: 140px;
-} */
+}
