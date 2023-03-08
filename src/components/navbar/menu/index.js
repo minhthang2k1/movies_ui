@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import {
   NotificationFilled,
   UserOutlined,
@@ -7,16 +8,24 @@ import {
 const Menu = () => {
   return (
     <ul>
-      <li className="language">EN</li>
-      <li className="notification">
-        <NotificationFilled />
-      </li>
-      <li className="profile">
-        <UserOutlined />
-      </li>
-      <li className="search">
-        <SearchOutlined />
-      </li>
+      <Link>
+        <li className="language">EN</li>
+      </Link>
+      <Link>
+        <li className="notification">
+          <NotificationFilled />
+        </li>
+      </Link>
+      <Link>
+        <li className="profile">
+          <UserOutlined />
+        </li>
+      </Link>
+      <Link to="/search">
+        <li className="search">
+          <SearchOutlined />
+        </li>
+      </Link>
     </ul>
   );
 };

@@ -1,24 +1,19 @@
 import "./App.css";
-import Navbar from "./components/navbar";
-import Footer from "./components/footer";
-import Hero from "./components/hero";
-import Trending from "./components/trending";
-import Trailer from "./components/trailer";
+
+import { Routes, Route } from "react-router-dom";
+
+import { Fragment } from "react";
+
+import SearchLayout from "./Layout/SearchLayout";
+import DefaultLayout from "./Layout/DefaultLayout";
 
 function App() {
   return (
     <div className="App">
-      <div>
-        <Navbar />
-      </div>
-      <div id="main">
-        <Hero />
-        <Trending />
-        <Trailer />
-      </div>
-      <div>
-        <Footer />
-      </div>
+      <Routes>
+        <Route path="/" element={<DefaultLayout />} />
+        <Route path="/search" element={<SearchLayout />} />
+      </Routes>
     </div>
   );
 }

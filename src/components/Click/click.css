@@ -1,0 +1,51 @@
+#options .list-option {
+  background-color: #fff;
+  width: 140px;
+  border-radius: 5px;
+}
+
+#options .list-option li {
+  padding: 4px 0;
+}
+
+#options .list-option li p {
+  padding: 6px 20px;
+  font-size: 0.9em;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+#options .list-option li p a {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.6);
+  background-color: transparent;
+}
+
+#options .list-option li p a span {
+  margin-right: 4px;
+  font-size: 1.2em;
+  position: relative;
+  top: 0;
+  left: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1em;
+  min-height: 1em;
+  width: 1em;
+  height: 1em;
+  line-height: inherit;
+  background-position: center center;
+  background-repeat: no-repeat;
+  color: inherit;
+  box-sizing: border-box;
+}

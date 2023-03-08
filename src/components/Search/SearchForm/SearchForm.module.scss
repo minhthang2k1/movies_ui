@@ -1,0 +1,22 @@
+.search {
+  margin-top: 64px;
+  width: 100%;
+  background-color: #fff;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .subMedia {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: 0;
+    left: 0;
+    max-width: var(--maxPrimaryPageWidth);
+    width: 100%;
+    padding: 0 40px;
+    .form {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+#main {
+  width: 85%;
+  flex-direction: column;
+  margin: auto;
+  justify-content: center;
+  background-color: #fff;
+}

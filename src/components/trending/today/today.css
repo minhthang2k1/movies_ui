@@ -102,11 +102,6 @@
   margin-left: 40px;
 }
 
-#today .container .options a {
-  height: 20px;
-  width: 20px;
-}
-
 #today .container .options:hover {
   cursor: pointer;
   background: #3465c0;
