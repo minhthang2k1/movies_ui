@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import styles from "./CardResult.module.scss";
-import nullImg from "../../../../assets/null.jpg";
+import nullImg from "../../../../../assets/null.jpg";
 
 const CardResult = ({ data }) => {
   return (

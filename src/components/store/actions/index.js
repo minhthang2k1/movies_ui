@@ -32,7 +32,7 @@ export const getSearchMovies = () => async (dispatch) => {
     const data = await axios.get(
       `${BASE_URL}/search/movie?api_key=${API_KEY}&query=${query}`
     );
-    dispatch({ type: types.GET_SEARCH_MOVIES, payload: data.data });
+    dispatch({ type: types.GET_SEARCH_MOVIES, payload: data.data.results });
   } catch (error) {
     console.log("Get Search Movies error", error);
   }
