@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
 import ImgPlay from "../../../assets/play.svg";
@@ -7,6 +7,9 @@ import Click from "../../Click/Click";
 import * as actions from "../../store/actions";
 
 import "./ontv.css";
+import PlayVideo from "../../PlayVideo";
+
+export let id = "1416";
 
 const Ontv = () => {
   const dispatch = useDispatch();
@@ -14,13 +17,25 @@ const Ontv = () => {
   useEffect(() => {
     dispatch(actions.getLatestMovies());
   }, []);
+  console.log(LatestMovies);
+
+  const [idMovie, setIdMovie] = useState("");
+  const [openModal, setOpenModal] = useState(false);
+
+  function handleClick(key) {
+    setOpenModal(true);
+    setIdMovie(key);
+    id = LatestMovies[key].id;
+    return id;
+  }
+
   return (
     <div id="ontv" className="media scroller-wrap should_fade is_fading">
       <div className="trending-scroll loaded column-content flex">
         {LatestMovies &&
           LatestMovies.map((data, index) => (
             <div className="container" key={index}>
-              <div className="img-content">
+              <div className="img-content" onClick={() => handleClick(index)}>
                 <Link>
                   <img
                     src={`https://image.tmdb.org/t/p/original${
@@ -46,6 +61,7 @@ const Ontv = () => {
             </div>
           ))}
       </div>
+      <PlayVideo openModal={openModal} setOpenModal={setOpenModal} id={id} />
     </div>
   );
 };

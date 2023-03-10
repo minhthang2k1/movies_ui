@@ -1,6 +1,9 @@
 import axios from "axios";
 import * as types from "../constants";
 import { query } from "../../Search/SearchForm";
+import { id } from "../../trailer/ontv";
+
+console.log(id);
 
 const API_KEY = "26370393c28fe739f97aa4e0322e030f";
 const BASE_URL = "https://api.themoviedb.org/3";
@@ -35,5 +38,16 @@ export const getSearchMovies = () => async (dispatch) => {
     dispatch({ type: types.GET_SEARCH_MOVIES, payload: data.data.results });
   } catch (error) {
     console.log("Get Search Movies error", error);
+  }
+};
+
+export const getIdMovies = () => async (dispatch) => {
+  try {
+    const data = await axios.get(
+      `${BASE_URL}/movie/${id}/videos?api_key=${API_KEY}`
+    );
+    dispatch({ type: types.GET_ID_MOVIES, payload: data.data.results });
+  } catch (error) {
+    console.log("Get ID Movies error", error);
   }
 };

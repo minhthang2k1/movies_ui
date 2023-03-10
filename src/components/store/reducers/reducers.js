@@ -5,6 +5,7 @@ const initialState = {
   LatestMovies: null,
   TrailerMovies: null,
   SearchMovies: null,
+  IdMovies: null,
 };
 
 const reducers = (state = initialState, actions) => {
@@ -29,6 +30,11 @@ const reducers = (state = initialState, actions) => {
       return {
         ...state,
         SearchMovies: payload,
+      };
+    case types.GET_ID_MOVIES:
+      return {
+        ...state,
+        IdMovies: payload,
       };
     default:
       return state;

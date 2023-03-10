@@ -112,6 +112,10 @@
   align-items: center;
 }
 
+#ontv .container .img-content:hover {
+  scale: 1.1;
+}
+
 #ontv .container .img-content .play img {
   filter: invert(1);
   width: 70px;
@@ -121,6 +125,10 @@
   left: 50%;
   transform: translateX(-50%);
   font-size: 4em;
+}
+
+#ontv .container .img-content .play:hover {
+  cursor: pointer;
 }
 
 #ontv .container #options {
