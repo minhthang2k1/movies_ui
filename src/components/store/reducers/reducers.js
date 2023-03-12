@@ -6,6 +6,8 @@ const initialState = {
   TrailerMovies: null,
   SearchMovies: null,
   IdMovies: null,
+  TokenLogin: null,
+  SessionIdResponse: null,
 };
 
 const reducers = (state = initialState, actions) => {
@@ -35,6 +37,16 @@ const reducers = (state = initialState, actions) => {
       return {
         ...state,
         IdMovies: payload,
+      };
+    case types.POST_TOKEN_LOGIN:
+      return {
+        ...state,
+        TokenLogin: payload,
+      };
+    case types.POST_SESSIONID_RESPONSE:
+      return {
+        ...state,
+        SessionIdResponse: payload,
       };
     default:
       return state;

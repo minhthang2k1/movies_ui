@@ -11,7 +11,12 @@ import "./click.css";
 
 const Click = () => {
   return (
-    <div id="options">
+    <div
+      id="options"
+      onClick={function handleClick(e) {
+        e.stopPropagation();
+      }}
+    >
       <Link to="/">
         <EllipsisOutlined />
       </Link>

@@ -1,8 +1,19 @@
-import { Modal } from "antd";
+import Modal from "react-modal";
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import * as actions from "../store/actions";
 import Null from "../../assets/null.jpg";
+
+const customStyles = {
+  content: {
+    top: "50%",
+    left: "50%",
+    right: "auto",
+    bottom: "auto",
+    marginRight: "-50%",
+    transform: "translate(-50%, -50%)",
+  },
+};
 
 const PlayVideo = ({ openModal, setOpenModal, id }) => {
   const dispatch = useDispatch();
@@ -16,23 +27,26 @@ const PlayVideo = ({ openModal, setOpenModal, id }) => {
     <>
       {IdMovies && (
         <Modal
-          width={1000}
-          height={500}
-          title={IdMovies[0] === undefined ? "Not Available" : IdMovies[0].name}
-          centered
-          open={openModal}
-          onOk={() => setOpenModal(false)}
-          onCancel={() => setOpenModal(false)}
+          ariaHideApp={false}
+          isOpen={openModal}
+          onRequestClose={() => setOpenModal(false)}
+          style={customStyles}
+          contentLabel="Example Modal"
         >
           <iframe
-            width="950"
-            height="315"
+            width={727}
+            height={500}
             src={
               IdMovies[0] === undefined
                 ? Null
                 : `https://www.youtube.com/embed/${IdMovies[0].key}`
             }
-          ></iframe>
+            title="YouTube video player"
+            frameBorder={0}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+          ;
         </Modal>
       )}
     </>

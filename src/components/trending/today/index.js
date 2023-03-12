@@ -12,7 +12,7 @@ const Today = () => {
   useEffect(() => {
     dispatch(actions.getTrendingMovies());
   }, []);
-  console.log(TrendingMovies);
+
   return (
     <div id="today" className="media scroller-wrap should_fade is_fading">
       <div className="trending-scroll loaded column-content flex">

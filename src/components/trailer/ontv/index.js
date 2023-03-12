@@ -9,7 +9,7 @@ import * as actions from "../../store/actions";
 import "./ontv.css";
 import PlayVideo from "../../PlayVideo";
 
-export let id = "1416";
+export let id = "";
 
 const Ontv = () => {
   const dispatch = useDispatch();
@@ -17,7 +17,6 @@ const Ontv = () => {
   useEffect(() => {
     dispatch(actions.getLatestMovies());
   }, []);
-  console.log(LatestMovies);
 
   const [idMovie, setIdMovie] = useState("");
   const [openModal, setOpenModal] = useState(false);
@@ -28,41 +27,44 @@ const Ontv = () => {
     id = LatestMovies[key].id;
     return id;
   }
+  console.log(id);
 
   return (
-    <div id="ontv" className="media scroller-wrap should_fade is_fading">
-      <div className="trending-scroll loaded column-content flex">
-        {LatestMovies &&
-          LatestMovies.map((data, index) => (
-            <div className="container" key={index}>
-              <div className="img-content" onClick={() => handleClick(index)}>
-                <Link>
-                  <img
-                    src={`https://image.tmdb.org/t/p/original${
-                      data.backdrop_path || data.poster_path
-                    }`}
-                    alt="thang 1"
-                  />
-                </Link>
+    <>
+      <div id="ontv" className="media scroller-wrap should_fade is_fading">
+        <div className="trending-scroll loaded column-content flex">
+          {LatestMovies &&
+            LatestMovies.map((data, index) => (
+              <div className="container" key={index}>
+                <div className="img-content" onClick={() => handleClick(index)}>
+                  <Link>
+                    <img
+                      src={`https://image.tmdb.org/t/p/original${
+                        data.backdrop_path || data.poster_path
+                      }`}
+                      alt="thang 1"
+                    />
+                  </Link>
 
-                <Click className="click" />
+                  <Click className="click" />
 
-                <div className="play">
-                  <img src={ImgPlay} alt="play trailer" />
+                  <div className="play">
+                    <img src={ImgPlay} alt="play trailer" />
+                  </div>
                 </div>
+                <div className="content">
+                  <h2>
+                    <Link>{data.name}</Link>
+                  </h2>
+                  <h3>{data.original_name}</h3>
+                </div>
+                <div className="hover"></div>
               </div>
-              <div className="content">
-                <h2>
-                  <Link>{data.name}</Link>
-                </h2>
-                <h3>{data.original_name}</h3>
-              </div>
-              <div className="hover"></div>
-            </div>
-          ))}
+            ))}
+        </div>
       </div>
       <PlayVideo openModal={openModal} setOpenModal={setOpenModal} id={id} />
-    </div>
+    </>
   );
 };
 
