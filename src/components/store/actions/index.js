@@ -3,8 +3,8 @@ import * as types from "../constants";
 import { query } from "../../Search/SearchForm";
 import { id } from "../../trailer/ontv";
 import { userName, passWord } from "../../login";
-
-console.log(userName, passWord);
+import { trending } from "../../trending";
+import { trailer } from "../../trailer";
 
 const API_KEY = "26370393c28fe739f97aa4e0322e030f";
 const BASE_URL = "https://api.themoviedb.org/3";
@@ -12,7 +12,7 @@ const BASE_URL = "https://api.themoviedb.org/3";
 export const getTrendingMovies = () => async (dispatch) => {
   try {
     const data = await axios.get(
-      `${BASE_URL}/trending/all/week?api_key=${API_KEY}&language=en-us`
+      `${BASE_URL}/trending/all/${trending}?api_key=${API_KEY}&language=en-us`
     );
     dispatch({ type: types.GET_API_TRENDING, payload: data.data.results });
   } catch (error) {
@@ -23,7 +23,7 @@ export const getTrendingMovies = () => async (dispatch) => {
 export const getLatestMovies = () => async (dispatch) => {
   try {
     const data = await axios.get(
-      `${BASE_URL}/tv/on_the_air?api_key=${API_KEY}&language=en-us`
+      `${BASE_URL}/${trailer}?api_key=${API_KEY}&language=en-us`
     );
     dispatch({ type: types.GET_LATEST_MOVIES, payload: data.data.results });
   } catch (error) {

@@ -11,7 +11,7 @@
 
 #trailer .header-trailer .tv-theater {
   border-radius: 30px;
-  border: 1px solid #000;
+  border: 1px solid rgba(30, 213, 169, 1);
   display: flex;
 }
 
@@ -22,19 +22,16 @@
 #trailer .tv-theater h3 a {
   font-size: 16px;
   text-decoration: none;
-  color: #000;
-}
-
-#trailer {
-  padding-top: 30px;
-}
-
-#trailer .native {
-  border-radius: 30px;
-  border: #000 solid 1px;
-  background-color: rgba(3, 37, 65, 1);
-}
-
-#trailer .header-trailer .tv-theater .native a {
   color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+#trailer .tv-theater h3:first-child {
+  border-radius: 30px;
+  background-color: rgba(30, 213, 169, 1);
+}
+
+#trailer .header-trailer .tv-theater h3:first-child a {
+  color: rgba(3, 37, 65, 1);
 }

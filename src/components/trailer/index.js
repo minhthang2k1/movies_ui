@@ -1,18 +1,23 @@
-import Heading from "./heading";
-import "./trailer.css";
 import Ontv from "./ontv";
-import Theater from "./theater";
+
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import * as actions from "../store/actions";
+
+export let trailer = "tv/on_the_air";
 
 const Trailer = () => {
+  const dispatch = useDispatch();
+  const { LatestMovies } = useSelector((state) => state.infoMovies);
+  useEffect(() => {
+    dispatch(actions.getLatestMovies());
+  }, [trailer]);
+
   return (
     <div id="trailer">
-      <Heading />
       <div className="trailer-content">
         <div className="tv">
-          <Ontv />
-        </div>
-        <div className="theater">
-          <Theater />
+          <Ontv data={LatestMovies} trailer={trailer} />
         </div>
       </div>
     </div>

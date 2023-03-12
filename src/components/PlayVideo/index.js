@@ -21,7 +21,6 @@ const PlayVideo = ({ openModal, setOpenModal, id }) => {
   useEffect(() => {
     dispatch(actions.getIdMovies());
   }, [id]);
-  console.log(IdMovies);
 
   return (
     <>

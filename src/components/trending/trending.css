@@ -1,3 +1,10 @@
+.wrapper-trending {
+  background-image: url(https://www.themoviedb.org/assets/2/v4/misc/trending-bg-39afc2a5f77e31d469b25c187814c0a2efef225494c038098d62317d923f8415.svg);
+  background-position: 50% 200px;
+  background-size: 1300px;
+  background-repeat: no-repeat;
+}
+
 #trending .header-trending {
   display: flex;
   padding: 0 40px;
@@ -19,26 +26,23 @@
   padding: 4px 20px;
 }
 
+#trending .header-trending .today-thisweek h3:first-child {
+  border-radius: 30px;
+  background-color: rgba(3, 37, 65, 1);
+}
+
+#trending .header-trending .today-thisweek h3:first-child a {
+  color: rgba(30, 213, 169, 1);
+}
+
 #trending .today-thisweek h3 a {
   font-size: 16px;
   text-decoration: none;
-  color: #000;
+  display: flex;
+  align-items: center;
+  color: rgba(3, 37, 65, 1);
 }
 
 #trending {
   padding-top: 30px;
-}
-
-#trending .trending-content {
-  padding: 30px 0;
-}
-
-#trending .native {
-  border-radius: 30px;
-  border: #000 solid 1px;
-  background-color: rgba(3, 37, 65, 1);
-}
-
-#trending .header-trending .today-thisweek .native a {
-  color: #fff;
 }
