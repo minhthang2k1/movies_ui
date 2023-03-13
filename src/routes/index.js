@@ -1,13 +1,11 @@
-import HeaderOnly from "~/component/Layout/HeaderOnly";
-
-import Home from "~/pages/Home";
-import Following from "~/pages/Following";
-import Search from "~/pages/Search";
-import Upload from "~/pages/Upload";
+import DefaultLayout from "../Layout/DefaultLayout";
+import SearchLayout from "../Layout/SearchLayout";
+import LoginLayout from "../Layout/DefaultLayout";
+import DetailMovieLayout from "../Layout/DetailMovieLayout";
 
 export const publicRoutes = [
-  { path: "/", component: Home },
-  { path: "/following", component: Following },
-  { path: "/upload", component: Upload, layout: HeaderOnly },
-  { path: "/search", component: Search, layout: null },
+  { path: "/", layout: DefaultLayout },
+  { path: "/login", layout: LoginLayout },
+  { path: "/movie", layout: DetailMovieLayout },
+  { path: "/search", layout: SearchLayout },
 ];

@@ -26,13 +26,11 @@ const Login = () => {
     state === false ? setState(true) : setState(false);
     userName = values.username;
     passWord = values.password;
-    if (TokenLogin === null) {
+    if (TokenLogin) {
       localStorage.setItem("session_id", SessionIdResponse);
       TokenLogin.success === false
         ? alert("username or password incorrect")
         : navigate("/");
-    } else {
-      alert("username or password incorrect");
     }
     return userName, passWord;
     // try {
